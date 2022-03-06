@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Tech PAN - Sistema de Amortização Constante</title>
+  </head>
+  <body>
+    <header role="banner" class="header py-3 mb-3 border-bottom">
+      <div
+        class="header-container container-fluid d-grid gap-3 align-items-center"
+      >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid gap-5">
+            <img
+              src="/img/header-icon.svg"
+              alt="Logo Banco Pan"
+              class="header-container__img"
+            />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDarkDropdown"
+              aria-controls="navbarNavDarkDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDarkDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Produtos
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-dark"
+                    aria-labelledby="navbarDarkDropdownMenuLink"
+                  >
+                    <li><a class="dropdown-item" href="#">Conta digital</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Maquininha TURBO PAN</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Empréstimo FGTS</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Cartão de crédito</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Empréstimo Consignado</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Cartão consignado</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Dropdown produtos-->
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDarkDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Institucional
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-dark"
+                    aria-labelledby="navbarDarkDropdownMenuLink"
+                  >
+                    <li><a class="dropdown-item" href="#">Sobre o PAN</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Open Banking</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Trabalhe Conosco</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Rede de vendas</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Relação investidores</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Atendimento</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Dropdown institucional-->
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDarkDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Atendimento
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-dark"
+                    aria-labelledby="navbarDarkDropdownMenuLink"
+                  >
+                    <li><a class="dropdown-item" href="#">Acesso rápido</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Perguntas frequentes</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Baixe o app</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Chat</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Atendimento em libras</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--Dropdown atendimento-->
+            </div>
+            <a href="https://webbanking.bancopan.com.br/login" class="header-container__areacliente mb-0">
+                Área do cliente
+            </a>
+            <button class="btn r header-container__btnabrirconta">Abrir conta</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <h1 class="text-center pt-5 pb-5 m-auto">
+      Sistema de Amortizações Constantes (SAC)
+    </h1>
+
+    <div class="container bg-dark p-3 rounded-3 mb-3 w-75">
+      <div class="container border mb-2 rounded-3 bg-white">
+        <h2 class="subtitle ml-5 pt-5 pb-5">Simulação de financiamento</h2>
+
+        <form class="row g-3 was-validated formulario">
+          <div class="col-md-4">
+            <label for="valorTotalFinanciado" class="form-label">Valor</label>
+            <input
+              type="number"
+              min="1000"
+              class="form-control valorTotalFinanciado"
+              id="valorTotalFinanciado"
+              name="valorTotalFinanciado"
+              required
+            />
+            <div class="valid-feedback">Preenchido ok!</div>
+
+            <div class="invalid-feedback">Valor mínimo = 1000!</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="prazoAnos" class="form-label">Prazo (anos)</label>
+            <input
+              type="number"
+              min="1"
+              step="1"
+              class="form-control prazoAnos"
+              id="prazoAnos"
+              name="prazoAnos"
+              required
+            />
+            <div class="valid-feedback">Preenchido ok!</div>
+
+            <div class="invalid-feedback">Valor mínimo = 1!</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="jurosAoAno" class="form-label">Juros ao ano</label>
+            <input
+              type="number"
+              min="0.01"
+              step="0.01"
+              class="form-control jurosAoAno"
+              id="jurosAoAno"
+              name="jurosAoAno"
+              required
+            />
+            <div class="valid-feedback">Preenchido ok!</div>
+
+            <div class="invalid-feedback">Valor mínimo = 0,01</div>
+          </div>
+
+          <div class="col-12 mb-3">
+            <button
+              onclick="apresentarValoresIniciais()"
+              class="btn btn-primary btnSimular"
+              type="submit"
+            >
+              Simular
+            </button>
+            <button class="btn btn-secondary btnReiniciar" type="reset">
+              Reiniciar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="container border rounded-3 bg-white pb-2">
+        <h2 class="subtitle ml-5 pt-5 pb-5">Resultado</h2>
+
+        <div class="row container px-3">
+          <div class="col-md-4">
+            <label for="resultadoPrazoMeses" class="form-label"
+              >Prazo (meses)</label
+            >
+            <input
+              type="number"
+              min="1000"
+              class="form-control resultadoPrazoMeses"
+              id="resultadoPrazoMeses"
+              name="resultadoPrazoMeses"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label for="resultadoJurosAoMes" class="form-label"
+              >Juros ao mês</label
+            >
+            <input
+              type="number"
+              min="1"
+              class="form-control resultadoJurosAoMes"
+              id="resultadoJurosAoMes"
+              name="resultadoJurosAoMes"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label for="resultadoJurosAcumulados" class="form-label"
+              >Juros acumulados</label
+            >
+            <input
+              type="number"
+              min="0.01"
+              step="0.01"
+              class="form-control resultadoJurosAcumulados"
+              id="resultadoJurosAcumulados"
+              name="resultadoJurosAcumulados"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="tabela row p-3 overflow-scroll">
+          <table class="table-sm table table-hover text-center table-responsive">
+            <thead class="table-dark">
+              <tr>
+                <th>Prestação</th>
+                <th>Amortização</th>
+                <th>Juros</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <!--fim div resultados-->
+    </div>
+
+
+    <footer class="footer-main p-5 border-top">
+    
+            <section class="footer-main__section d-lg-flex mx-4 justify-content-between">
+                <div class="col-lg-3 col-md-3 col-sm-12 footer-main__pan">
+                    
+                    <img src="/img/mh-icon--logo-desktop-negative.svg" alt="" class="footer-main__logo">
+                    <p class="footer-main__pan-copyright">
+                        Banco PAN&#169 2021.
+                    </p>
+                    <h4 class="footer-main__pan-ajuda">Precisando de ajuda?</h4>
+                    <button class="footer-main__pan-button btn rounded-pill">Chat Online</button>
+                    <h4 class="footer-main__pan-redestitulo">Redes Sociais</h4>
+                    <div class="foorter-main__pan-social-media">
+                        <a href="" class="footer-main__pan-social-media-icon">
+                            <img src="/img/mh-icon--facebook.svg" alt="Ícone logotipo Facebook">
+                        </a>
+                        <a href="" class="footer-main__pan-social-media-icon">
+                            <img src="/img/mh-icon--instagram.svg" alt="Ícone logotipo Instagram">
+                        </a>
+                        <a href="" class="footer-main__pan-social-media-icon">
+                            <img src="/img/mh-icon--twitter.svg" alt="Ícone logotipo Twitter">
+                        </a>
+                        <a href="" class="footer-main__pan-social-media-icon">
+                            <img src="/img/mh-icon--youtube.svg" alt="Ícone logotipo Youtube">
+                        </a>
+                        <a href="" class="footer-main__pan-social-media-icon">
+                            <img src="/img/mh-icon--linkedin.svg" alt="Ícone logotipo Linkedin">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 footer-main__produtos">
+                    <h5 class="footer-main__produtos-titulo">
+                        Produtos
+                    </h5>
+                    <ul class="footer-main__produtos-lista">
+                        <li class="footer-main__card-info-item"><a title="Cartões de Crédito (link interno)" href="https://www.bancopan.com.br/produtos/cartao-de-credito/">Cartões de Crédito</a></li>
+                        <li class="footer-main__card-info-item"><a title="Financiamento de Veículos (link interno)" href="https://www.bancopan.com.br/produtos/financiamento-de-veiculos/">Financiamento de Veículos</a></li>
+                        <li class="footer-main__card-info-item"><a title="Empréstimo Consignado (link interno)" href="https://www.bancopan.com.br/produtos/emprestimo-consignado/">Empréstimo Consignado</a></li>
+                        <li class="footer-main__card-info-item"><a title="Cartão Consignado (link interno)" href="https://www.bancopan.com.br/produtos/cartao-consignado/">Cartão Consignado</a></li>
+                        <li class="footer-main__card-info-item"><a title="Consórcio (link interno)" href="https://www.bancopan.com.br/produtos/consorcios/">Consórcio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-12 footer-main__atendimento">
+                    <h5 class="footer-main__atendimento-titulo">
+                        Atendimento
+                    </h5>
+                    <ul class="footer-main__atendimento-lista">
+                        <li class="footer-main__card-info-item"><a title="Fale Conosco (link interno)" href="https://www.bancopan.com.br/atendimento/fale-com-o-pan/">Fale Conosco</a></li>
+                        <li class="footer-main__card-info-item"><a title="Serviços Online (link interno)" href="https://www.bancopan.com.br/servicos-online/">Serviços Online</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Negocie sua dívida (link externo)" href="https://renegocie.bancopan.com.br/renegociacao?utm_source=footer&amp;utm_medium=interno">Negocie sua dívida</a></li>
+                        <li class="footer-main__card-info-item"><a title="Ouvidoria (link interno)" href="https://www.bancopan.com.br/atendimento/ouvidoria/">Ouvidoria</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Canal de Denúncias (link externo)" href="https://spa.bancopan.com.br/rcp_net/frmFormalizarDenuncia.aspx">Canal de Denúncias</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-12 footer-main__outrasInfos">
+                    <h5 class="footer-main__outrasInfos-titulo">
+                        Outras Informações
+                    </h5>
+                    <ul class="footer-main__outrasInfos-lista">
+                        <li class="footer-main__card-info-item"><a title="Sobre o PAN (link interno)" href="https://www.bancopan.com.br/sobre-o-pan-banco-pan/">Sobre o PAN</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Relação com Investidores (link interno)" href="https://ri.bancopan.com.br/">Relação com Investidores</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Trabalhe Conosco (link externo)" href="https://www.bancopan.com.br/trabalhe-conosco/">Trabalhe Conosco</a></li>
+                        <li class="footer-main__card-info-item"><a title="Rede de Vendas (link interno)" href="https://www.bancopan.com.br/atendimento/rede-de-vendas/">Rede de vendas</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Leilão de Imóveis (link externo)" href="https://www.bancopan.com.br/leilao-de-imoveis/">Leilão de Imóveis</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Tarifas (link externo)" href="https://www.bancopan.com.br/informacoes-uteis/tarifas/">Tarifas</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Informações úteis (link externo)" href="https://www.bancopan.com.br/informacoes-uteis/">Informações Úteis</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="Código de Defesa do Consumidor (link externo)" href="http://www.planalto.gov.br/ccivil_03/Leis/L8078compilado.htm">Código de Defesa do Consumidor</a></li>
+                        <li class="footer-main__card-info-item"><a rel="noopener" target="_blank" title="SCR - Informação ao Crédito (link externo)" href="https://www.bancopan.com.br/sistema-de-informacao-ao-credito/">SCR - informação ao Cŕedito</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-12 footer-main__termos"></div>
+            </section>
+     
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

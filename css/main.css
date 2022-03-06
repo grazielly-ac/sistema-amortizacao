@@ -1,0 +1,89 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.btnReiniciar:focus,
+.btnSimular:focus{
+    box-shadow: none;
+    outline: 0;
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  background-color: rgb(248,249,250);
+  z-index: 1;
+}
+
+.header-container__btnabrirconta,
+.footer-main__pan-button:hover {
+  color: #fff;
+  background-color: #039be5;
+  border-color: #039be5;
+}
+
+.header-container__btnabrirconta {
+  border-radius: 12px;
+}
+
+.header-container__areacliente {
+  text-decoration: none;
+  color: #414141;
+  cursor: pointer;
+}
+
+.header-container__areacliente:active,
+.header-container__areacliente:visited,
+.header-container__areacliente:hover,
+.header-container__areacliente:link {
+  text-decoration: none;
+  color: #414141;
+  cursor: pointer;
+}
+
+  .footer-main {
+    background-color: #414141;
+    color: #fff;
+    padding-top: 48px;
+  }
+
+  .footer-main__pan-button,
+  .header-container__btnabrirconta {
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+  }
+
+  .footer-main__pan-button,
+  .header-container__btnabrirconta:hover {
+    background-color: #03a9f4;
+    border-color: #03a9f4;
+    color: #fff;
+  }
+
+.footer-main__section{
+    margin: 0 auto;
+}
+
+.footer-main__atendimento-lista,
+.footer-main__produtos-lista,
+.footer-main__outrasInfos-lista{
+
+    list-style: none;
+    padding: 0;
+}
+
+li.footer-main__card-info-item > a{
+    text-decoration: underline;
+    color:#fff;
+
+}
+
+.footer-main__pan,
+.footer-main__produtos,
+.footer-main__atendimento,
+.footer-main__outrasInfos,
+.footer-main__termos{
+    
+    
+    padding: 2em;
+}
